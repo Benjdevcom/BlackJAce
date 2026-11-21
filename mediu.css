@@ -45,5 +45,16 @@ body {
     min-width: 1 em;
 }
 
-
+#main{
+    grid-template-columns:repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-areas: 
+    "main3 main2"
+    "main1 main1"
+    "main4 main7"
+    "main5 main6"
+    "main8 main11"
+    "main9 main10"
+    "main12 main13"
+    ;
+}
 }
