@@ -63,6 +63,7 @@ body {
     display:none;
     justify-content: center;
     align-items: center;
+    aspect-ratio: 1/1;
 }
 
 #titlu{
