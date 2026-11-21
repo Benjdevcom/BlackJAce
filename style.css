@@ -17,7 +17,7 @@
 }
 @font-face{
     font-family: "Cinzel-Normal";
-    src: url('/Fonts/static/Cinzel-Regular.ttf') format('truetype');
+    src: url('Fonts/static/Cinzel-Regular.ttf') format('truetype');
 }
 
 html{
