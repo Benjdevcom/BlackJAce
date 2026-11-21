@@ -38,7 +38,6 @@ body {
 #buton{
     display:none;
     grid-area:buton;
-    background-color: rgb(149, 113, 65);
     width: auto;
 }
 #buton-meniu{

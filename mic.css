@@ -25,17 +25,38 @@ body {
     ;
 }
 #buton{
-    display:block;
+    #checkbox-meniu{
+        display: none;
+    }
+    display:flex;
     grid-area:buton;
-    background-color: rgb(149, 113, 65);
+    justify-content: center;
+    align-items: center;
     width: auto;
+    img{
+        width: 70px;
+        height: 70px;
+    }
 }
-#buton-meniu{
-    background-color: rgb(149, 113, 65);
-}
+
 
 #meniu{
     display:none;
+}
+body:has(#checkbox-meniu:checked){
+    grid-template-areas: 
+    "meniu buton titlu titlu titlu cont"
+    "meniu main main main main main"
+    "meniu main main main main main"
+    "meniu main main main main main"
+    "meniu main main main main main"
+    "meniu main main main main main"
+    "meniu footer footer footer footer footer"
+    ;
+
+    #meniu{
+        display:block;
+    }
 }
 #main{
     grid-template-columns:repeat(auto-fit, minmax(100px, 1fr));
