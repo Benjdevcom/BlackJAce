@@ -74,7 +74,7 @@ body:has(#checkbox-meniu:checked){
     #im2{
         position: fixed;
         top: 0;
-        left: 11.8em;
+        left: 10.1em;
         display:block;
         max-width: 30px;
         max-height: 30px;
