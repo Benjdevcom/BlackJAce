@@ -1,0 +1,232 @@
+:root {
+    --culoare-fundal: rgb(46, 1, 0);
+    --culoare-header: rgb(162, 103, 0);
+    --culoare-titlu: rgb(45, 0, 0);
+    --culoare-meniu: rgb(75, 1, 1);
+    --culoare-border: rgb(49, 0, 0);
+    --culoare-scris:rgb(162, 103, 0);
+    --culoare-aur: rgb(212, 175, 55);
+    --culoare-crem: rgb(222, 222, 169);
+    --culoare-main: rgb(99, 0, 0);
+    --culoare-section: rgb(23, 0, 0);
+}
+
+@font-face{
+    font-family: "Cinzel";
+    src: url('/Fonts/static/Cinzel-ExtraBold.ttf') format('truetype');
+}
+@font-face{
+    font-family: "Cinzel-Normal";
+    src: url('/Fonts/static/Cinzel-Regular.ttf') format('truetype');
+}
+
+html{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+h1 {
+    font-family: 'Cinzel';
+    color: var(--culoare-aur);
+    text-align: center;
+    margin-top: 50px;
+}
+
+p{
+    font-family: 'Cinzel-Normal';
+    color: var(--culoare-crem)
+}
+
+body {
+    background-color: var(--culoare-fundal);
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display:grid;
+    grid-template-columns: auto minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) auto;
+    gap: 2px;
+    grid-template-areas: 
+    "meniu titlu titlu titlu titlu titlu cont"
+    "meniu main main main main main aside"
+    "meniu main main main main main aside"
+    "meniu main main main main main aside"
+    "meniu main main main main main aside"
+    "meniu main main main main main aside"
+    "meniu footer footer footer footer footer footer"
+    ;
+}
+
+#buton{
+    display:none;
+    justify-content: center;
+    align-items: center;
+}
+
+#titlu{
+    grid-area:titlu;
+    background-color: var(--culoare-titlu);
+    border-radius: 10px;
+    margin:2px;
+
+}
+#meniu{
+    grid-area:meniu;
+    background-color:var(--culoare-meniu);
+    padding:10px;
+    border:2px solid var(--culoare-border);
+    border-radius: 10px;
+    #meniu1{
+        margin-top: 1em;
+        position: sticky;
+        top:1em;
+        ol{
+            list-style-type: none;
+            padding-inline-start: 5px;
+            padding-inline-end: 5px;
+            div{
+                position:relative;
+                margin:3px;
+                background-color: var(--culoare-titlu);
+                border: 1px solid var(--culoare-titlu);
+                border-radius:10px;
+                padding: 5px;
+                padding-left: 10px;
+                padding-right: 10px;
+                li{
+                    p{
+                        margin:0px;
+                    }
+                    ul{
+                        background-color: var(--culoare-meniu);
+                        border: 1px solid var(--culoare-meniu);
+                        border-radius:10px;
+                        list-style-type: none;
+                        text-align:right;
+                        padding-left: 20px;
+                        position:absolute;
+                        top:100%;
+                        right:0;
+                        opacity:0;
+                        visibility:hidden;
+                        transform: translateY(10px);
+                        transition:transform 0.3s ease;
+                        li{
+                            p{
+                            margin:2px;
+                            } 
+                        }
+                    }
+                    &:hover ul{
+                    opacity:1;
+                    visibility: visible;
+                    transform: translateY(0);
+                    z-index: 1;
+                    position:relative;
+                    }
+                }
+            }
+        }
+    }
+    
+
+}
+#main{
+    border-radius: 10px;
+    margin:0;
+    grid-area:main;
+    background-color: var(--culoare-main);
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(100px, 1fr));
+    gap: 2px;
+    grid-template-areas: 
+    "main3 main2 main4"
+    "main1 main1 main1"
+    "main5 main6 main7"
+    "main8 main9 main10"
+    "main11 main12 main13"
+    ;
+    section{
+        border-radius: 10px;
+        margin:2px;
+        background-color: var(--culoare-section);
+        h1,p{
+            padding-inline-start: 5px;
+            padding-inline-end: 5px;
+            margin:10px;
+        }
+    }
+    
+
+
+}
+
+
+#main2{
+    grid-area:main2;
+    justify-content: center;
+    align-items: center;
+    /* figure{
+        img{
+            max-width: 100%;
+            min-width: 100px;
+            height: auto;
+        }
+    } */
+}
+
+#main1{
+    grid-area:main1;
+    li{
+        list-style-type: disc;
+        &::marker{
+            color: var(--culoare-scris);
+        }
+        
+    }
+}
+#main3{
+    grid-area:main3;
+}
+#main4{
+    grid-area:main4;
+}
+#aside{
+    grid-area:aside;
+    background-color: rgb(27, 1, 1);
+
+}
+
+#footer{
+    grid-area:footer;
+    background-color: rgb(111, 16, 16);
+}
+
+
+.main-header {
+    background-color: var(--culoare-header);
+    div{
+        h1{
+            margin: 0;
+            padding:10px;
+        }
+    }
+    
+}
+
+#cont{
+    display:flex;
+    grid-area:cont;
+    background-color: var(--culoare-main);
+    margin:2px;
+    border-radius: 10px;
+    text-align: center;
+    justify-content: center;
+    align-items:center;
+    p{
+        padding:10px;
+        margin:0;
+    }
+}

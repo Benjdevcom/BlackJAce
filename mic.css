@@ -1,0 +1,41 @@
+:root {
+    --culoare-fundal: rgb(46, 1, 0);
+    --culoare-header: rgb(162, 103, 0);
+    --culoare-titlu: rgb(45, 0, 0);
+    --culoare-meniu: rgb(75, 1, 1);
+}
+
+@media screen and (max-width: 600px){
+body {
+    background-color: var(--culoare-fundal);
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display:grid;
+    grid-template-columns:  auto minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) auto;;
+    max-height:100vh;
+    grid-template-areas: 
+    "buton titlu titlu titlu cont"
+    "main main main main main"
+    "main main main main main"
+    "main main main main main"
+    "main main main main main"
+    "main main main main main"
+    "footer footer footer footer footer"
+    ;
+}
+#buton{
+    display:block;
+    grid-area:buton;
+    background-color: rgb(149, 113, 65);
+    width: auto;
+}
+#buton-meniu{
+    background-color: rgb(149, 113, 65);
+}
+
+#meniu{
+    display:none;
+}
+
+}

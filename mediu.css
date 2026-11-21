@@ -1,0 +1,49 @@
+:root {
+    --culoare-fundal: rgba(46, 1, 0, 0.962);
+    --culoare-header: rgba(162, 103, 0, 0.955);
+    --culoare-titlu: rgb(45, 0, 0);
+    --culoare-meniu: rgb(75, 1, 1);
+}
+
+@media screen and (max-width: 1000px){
+html{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#aside{
+    display:none;
+}
+
+body {
+    background-color: var(--culoare-fundal);
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display:grid;
+    grid-template-columns: auto minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) auto;
+    min-height:100vh;
+    grid-template-areas: 
+    "meniu titlu titlu titlu titlu cont"
+    "meniu main main main main main"
+    "meniu main main main main main"
+    "meniu main main main main main"
+    "meniu main main main main main"
+    "meniu main main main main main"
+    "meniu footer footer footer footer footer"
+    ;
+}
+#buton{
+    display:none;
+    grid-area:buton;
+    background-color: rgb(149, 113, 65);
+    width: auto;
+}
+#buton-meniu{
+    min-width: 1 em;
+}
+
+
+}
