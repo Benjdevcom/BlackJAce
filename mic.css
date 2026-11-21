@@ -24,6 +24,13 @@ body {
     "footer footer footer footer footer"
     ;
 }
+
+h1{
+    font-size: 1.5em;
+}
+p{
+    font-size: 0.8em;
+}
 #buton{
     #checkbox-meniu{
         display: none;
@@ -33,9 +40,13 @@ body {
     justify-content: center;
     align-items: center;
     width: auto;
-    img{
+    #im1{
+        display:block;
         max-width: 70px;
         max-height: 70px;
+    }
+    #im2{
+        display:none;
     }
 }
 
@@ -45,7 +56,7 @@ body {
 }
 body:has(#checkbox-meniu:checked){
     grid-template-areas: 
-    "meniu buton titlu titlu titlu cont"
+    "meniu titlu titlu titlu titlu cont"
     "meniu main main main main main"
     "meniu main main main main main"
     "meniu main main main main main"
@@ -56,6 +67,18 @@ body:has(#checkbox-meniu:checked){
 
     #meniu{
         display:block;
+    }
+    #im1{
+        display:none;
+    }
+    #im2{
+        position: fixed;
+        top: 0;
+        left: 11.8em;
+        display:block;
+        max-width: 30px;
+        max-height: 30px;
+        z-index: 10;
     }
 }
 #main{

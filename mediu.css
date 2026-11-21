@@ -35,13 +35,16 @@ body {
     "meniu footer footer footer footer footer"
     ;
 }
+h1{
+    font-size: 1.7em;
+}
+p{
+    font-size: 0.9em;
+}
 #buton{
     display:none;
     grid-area:buton;
     width: auto;
-}
-#buton-meniu{
-    min-width: 1 em;
 }
 
 #main{
