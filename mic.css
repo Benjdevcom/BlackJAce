@@ -60,6 +60,7 @@ p{
     display:none;
 }
 body:has(#checkbox-meniu:checked){
+    grid-template-columns: auto minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) auto;
     grid-template-areas: 
     "cont titlu titlu titlu titlu titlu"
     "meniu main main main main main"

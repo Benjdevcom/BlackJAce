@@ -114,7 +114,6 @@ body {
                 li{
                     p{
                         margin:0px;
-                        overflow: hidden;
                     }
                     ul{
                         background-color: var(--culoare-meniu);
@@ -133,6 +132,7 @@ body {
                         li{
                             p{
                             overflow-wrap: break-word;
+                            overflow: hidden;
                             margin:2px;
                             } 
                         }
