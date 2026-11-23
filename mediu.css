@@ -1,8 +1,14 @@
 :root {
-    --culoare-fundal: rgba(46, 1, 0, 0.962);
-    --culoare-header: rgba(162, 103, 0, 0.955);
+    --culoare-fundal: rgb(46, 1, 0);
+    --culoare-header: rgb(162, 103, 0);
     --culoare-titlu: rgb(45, 0, 0);
     --culoare-meniu: rgb(75, 1, 1);
+    --culoare-border: rgb(49, 0, 0);
+    --culoare-scris:rgb(162, 103, 0);
+    --culoare-aur: rgb(212, 175, 55);
+    --culoare-crem: rgb(222, 222, 169);
+    --culoare-main: rgb(99, 0, 0);
+    --culoare-section: rgb(23, 0, 0);
 }
 
 @media screen and (max-width: 1000px){

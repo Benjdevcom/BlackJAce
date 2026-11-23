@@ -64,6 +64,16 @@ body {
     justify-content: center;
     align-items: center;
     aspect-ratio: 1/1;
+    padding: 2px;
+    margin: 2px;
+    border-radius: 10px;
+    background-color: var(--culoare-meniu);
+    #im1{
+        border-radius: 10px;
+    }
+    #im2{
+        border-radius: 10px;
+    }
 }
 
 #titlu{
@@ -219,17 +229,35 @@ body {
 }
 
 #cont{
-    display:flex;
+    display:block;
     grid-area:cont;
+    justify-content: center;
+    align-items: center;
+    #buton-account{
+        display: flex;
+        padding: 2px;
+        margin: 0;
+        justify-content: center;
+        align-items:center;
+    }
+    #ImCont{
+        display:block;
+        max-width: 70px;
+        max-height: 70px;
+        border-radius: 10px;
+        justify-content: center;
+        align-items:center;
+
+    }
     background-color: var(--culoare-main);
     margin:2px;
     border-radius: 10px;
     text-align: center;
     justify-content: center;
     align-items:center;
-    p{
-        padding:10px;
-        margin:0;
-    }
+    background-image: url("Pro-Im/Background.webp");
+    background-size: cover;
+    background-position: center;
+    
 }
 
