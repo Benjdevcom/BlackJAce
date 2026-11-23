@@ -77,7 +77,7 @@ body {
 }
 
 #titlu{
-    width: fit-content;
+    height: fit-content;
     grid-area:titlu;
     display: flex;
     align-items: center;
