@@ -32,6 +32,7 @@ h1 {
     color: var(--culoare-aur);
     text-align: center;
     margin-top: 50px;
+    animation: puls 4s ease-in-out infinite;
 }
 
 p{
@@ -88,7 +89,7 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        &::before,&::after{
+        &::before{
             content: "";
             width: 50px;  
             height: 50px;
@@ -98,6 +99,30 @@ body {
             background-position: center;
             background-image: url('Pro-Im/back.png');
             border-radius: 10px;
+            animation: ImaginiTitlu 3.5s ease-in-out infinite;
+        }
+        &::after{
+            content: "";
+            width: 50px;  
+            height: 50px;
+            flex-shrink: 0;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-image: url('Pro-Im/back.png');
+            border-radius: 10px;
+            animation: ImaginiTitlu1 3.5s ease-in-out infinite;
+        }
+        h1{
+            transition: letter-spacing 0.4s ease, text-shadow 0.4s ease, color 0.4s ease;
+            &:hover {
+                color: var(--culoare-crem);
+                letter-spacing: 2px;
+                text-shadow:
+                    0 0 10px var(--culoare-aur),
+                    0 2px 0 rgb(40, 15, 0),
+                    0 6px 14px rgba(0, 0, 0, 0.95);
+            }
         }
     }
 }
@@ -116,7 +141,12 @@ body {
             list-style-type: none;
             padding-inline-start: 5px;
             padding-inline-end: 5px;
+            /* Sterge-l dupa */
+            /* div:nth-child(odd) {
+                background-color: var(--culoare-main);
+            } */
             div{
+                transition: text-shadow 0.4s ease, color 0.4s ease;
                 position:relative;
                 margin:3px;
                 background-color: var(--culoare-titlu);
@@ -129,6 +159,7 @@ body {
                     p{
                         margin:0px;
                     }
+                    
                     ul{
                         background-color: var(--culoare-meniu);
                         border: 1px solid var(--culoare-meniu);
@@ -158,6 +189,13 @@ body {
                     z-index: 1;
                     position:relative;
                     }
+                }
+                &:hover {
+                    color: var(--culoare-crem);
+                    text-shadow:
+                    0 0 10px var(--culoare-aur),
+                    0 2px 0 rgb(40, 15, 0),
+                    0 6px 14px rgba(0, 0, 0, 0.95);
                 }
             }
         }
@@ -303,4 +341,28 @@ body {
 }
 
 /* <- Pana aici  */
+
+
+
+@keyframes ImaginiTitlu {
+  0%, 100% {
+    transform: translateY(0px) rotate(-3deg);
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.8));
+  }
+  50% {
+    transform: translateY(-6px) rotate(10deg);
+    filter: drop-shadow(0 10px 12px rgba(212, 175, 55, 0.35)); 
+  }
+}
+
+@keyframes ImaginiTitlu1 {
+  0%, 100% {
+    transform: translateY(0px) rotate(-3deg);
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.8));
+  }
+  50% {
+    transform: translateY(-6px) rotate(-10deg);
+    filter: drop-shadow(0 10px 12px rgba(212, 175, 55, 0.35)); 
+  }
+}
 
