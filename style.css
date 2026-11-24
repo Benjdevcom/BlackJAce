@@ -156,6 +156,9 @@ body {
                 padding-left: 10px;
                 padding-right: 10px;
                 li{
+                    a{
+                        text-decoration: none;
+                    }
                     p{
                         margin:0px;
                     }
@@ -175,6 +178,9 @@ body {
                         transform: translateY(10px);
                         transition:transform 0.3s ease;
                         li{
+                            a{
+                                text-decoration: none;
+                            }
                             p{
                             overflow-wrap: break-word;
                             overflow: hidden;
