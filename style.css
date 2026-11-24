@@ -146,7 +146,7 @@ body {
                 background-color: var(--culoare-main);
             } */
             div{
-                transition: text-shadow 0.4s ease, color 0.4s ease;
+                transition: text-shadow 0.5s ease, color 0.5s ease;
                 position:relative;
                 margin:3px;
                 background-color: var(--culoare-titlu);
@@ -357,7 +357,7 @@ body {
 
 @keyframes ImaginiTitlu1 {
   0%, 100% {
-    transform: translateY(0px) rotate(-3deg);
+    transform: translateY(0px) rotate(3deg);
     filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.8));
   }
   50% {
