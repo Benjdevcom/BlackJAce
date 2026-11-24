@@ -319,6 +319,21 @@ body {
     
 }
 
+aside{
+    figure{
+        margin: 0;
+        #banner{
+        max-width: 200px;
+        width: auto;
+        height: auto;
+        overflow: hidden;
+        border-radius: 10px;
+        }
+        border-radius: 10px;
+    }
+    
+}
+
 /* Sters dupa ->  */  
 
 .Nefunctional > p {
