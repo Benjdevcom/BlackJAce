@@ -48,6 +48,7 @@ body {
     height: 100%;
     display:grid;
     grid-template-columns: auto minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) auto;
+    grid-template-rows: minmax(64px, auto) repeat(5, minmax(0, 1fr)) auto;
     gap: 2px;
     grid-template-areas: 
     "meniu titlu titlu titlu titlu titlu cont"
@@ -387,3 +388,68 @@ aside{
   }
 }
 
+
+
+
+
+
+/* Carti*/
+.carti input[type="radio"] {
+  display: none;
+}
+
+.tab-butoane {
+    .Butoane{
+        background-color: var(--culoare-meniu);
+        transition: text-shadow 0.4s ease, color 0.4s ease;
+            &:hover {
+                color: var(--culoare-crem);
+                text-shadow:
+                    0 0 10px var(--culoare-aur),
+                    0 2px 0 rgb(40, 15, 0),
+                    0 6px 14px rgba(0, 0, 0, 0.95);
+            }
+    }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  h1{
+    margin:0;
+  }
+  flex-wrap: wrap;
+}
+
+.tab-butoane label {
+  padding: 8px 14px;
+  cursor: pointer;
+  border: 1px solid #888;
+  border-radius: 6px;
+}
+
+.panou {
+  display: none;
+  padding: 12px;
+  border: 1px solid #555;
+  border-radius: 8px;
+}
+
+#tab-normal:checked ~ .panouri #panou-normal {
+  display: block;
+}
+
+#tab-special:checked ~ .panouri #panou-special {
+  display: block;
+}
+
+#tab-modifier:checked ~ .panouri #panou-modifier {
+  display: block;
+}
+
+#tab-normal:checked ~ .tab-butoane label[for="tab-normal"],
+#tab-special:checked ~ .tab-butoane label[for="tab-special"],
+#tab-modifier:checked ~ .tab-butoane label[for="tab-modifier"] {
+  border-color: gold;
+  font-weight: bold;
+}
