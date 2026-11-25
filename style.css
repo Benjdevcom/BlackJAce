@@ -563,3 +563,69 @@ aside{
   color: var(--culoare-titlu);
   font-weight: bold;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* footer */
+#footer {
+  padding: 16px 20px;
+  border-top: 1px solid var(--culoare-aur);
+  border-radius: 10px;
+}
+
+.footer-continut {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.footer-titlu {
+  font-family: 'Cinzel', serif;
+  color: var(--culoare-aur);
+  margin: 0 0 6px;
+  font-size: 1.1rem;
+}
+
+.footer-copyright {
+  font-size: 0.85rem;
+  opacity: 0.85;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* contact */
+
+#main p {
+  font-family: 'Cinzel-Normal', serif;
+  color: var(--culoare-crem);
+  margin: 0 14px 12px;
+  line-height: 1.5;
+}
