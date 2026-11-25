@@ -48,7 +48,7 @@ body {
     height: 100%;
     display:grid;
     grid-template-columns: auto minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) auto;
-    grid-template-rows: minmax(64px, auto) repeat(5, minmax(0, 1fr)) auto;
+    grid-template-rows: minmax(80px, auto);
     gap: 2px;
     grid-template-areas: 
     "meniu titlu titlu titlu titlu titlu cont"
@@ -335,8 +335,10 @@ aside{
         height: auto;
         overflow: hidden;
         border-radius: 10px;
+        object-fit: cover;
         }
         border-radius: 10px;
+        overflow: hidden;
     }
     
 }
@@ -431,7 +433,7 @@ aside{
 .panou {
   display: none;
   padding: 12px;
-  border: 1px solid #555;
+  margin: 5px;
   border-radius: 8px;
 }
 
@@ -455,3 +457,108 @@ aside{
 }
 
 
+
+
+
+
+/*   PaginiCarti   */
+.galerie-carti {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.galerie-carti input[type="radio"] {
+  display: none;
+}
+
+.grila-carti {
+  display: none; 
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+@media screen and (max-width: 1000px) {
+  .grila-carti {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .grila-carti {
+    grid-template-columns: 1fr;
+  }
+}
+
+.carte {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  height: fit-content;
+  margin: 0;
+  padding: 8px;
+  border-radius: 10px;
+  background-color: var(--culoare-titlu);
+  border: 1px solid var(--culoare-border);
+  text-align: center;
+}
+
+.carte img {
+  max-width: 120px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.carte figcaption {
+  margin-top: 6px;
+  font-family: 'Cinzel-Normal', serif;
+  color: var(--culoare-crem);
+  font-size: 0.9rem;
+}
+
+#pag-1:checked ~ .pagini #pagina-1,
+#pag-2:checked ~ .pagini #pagina-2,
+#pag-3:checked ~ .pagini #pagina-3,
+#pag-4:checked ~ .pagini #pagina-4,
+#pag-5:checked ~ .pagini #pagina-5,
+#pag-6:checked ~ .pagini #pagina-6,
+#pag-7:checked ~ .pagini #pagina-7 {
+  display: grid;
+}
+
+.paginare {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.paginare label {
+  min-width: 36px;
+  height: 36px;
+  padding: 0 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 6px;
+  border: 1px solid var(--culoare-aur);
+  background-color: var(--culoare-meniu);
+  color: var(--culoare-crem);
+  font-family: 'Cinzel', serif;
+  user-select: none;
+}
+
+
+#pag-1:checked ~ .paginare label[for="pag-1"],
+#pag-2:checked ~ .paginare label[for="pag-2"],
+#pag-3:checked ~ .paginare label[for="pag-3"],
+#pag-4:checked ~ .paginare label[for="pag-4"],
+#pag-5:checked ~ .paginare label[for="pag-5"],
+#pag-6:checked ~ .paginare label[for="pag-6"],
+#pag-7:checked ~ .paginare label[for="pag-7"] {
+  background-color: var(--culoare-aur);
+  color: var(--culoare-titlu);
+  font-weight: bold;
+}
